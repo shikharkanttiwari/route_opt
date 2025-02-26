@@ -1,0 +1,23 @@
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+<mat-card class="funnel-card">
+    <mat-card-header>
+      <div>
+        <mat-card-title>Sales Funnel</mat-card-title>
+        <mat-card-subtitle>Unique users making requests</mat-card-subtitle>
+      </div>
+      <div class="spacer"></div>
+      <button mat-icon-button>
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="sales-funnel-container">
+        <div class="funnel-stage" *ngFor="let stage of funnelStages">
+          <div class="stage-title">{{stage.title}}</div>
+          <div class="stage-count">{{stage.count}}</div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>

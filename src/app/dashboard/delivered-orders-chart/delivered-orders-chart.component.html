@@ -1,0 +1,31 @@
+
+<mat-card class="chart-card">
+    <mat-card-header>
+      <mat-card-title>Delivered orders</mat-card-title>
+      <div class="spacer"></div>
+      <mat-form-field appearance="outline">
+        <mat-select [(value)]="selectedYear">
+          <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="chart-container">
+        <!-- <canvas baseChart
+               [type]="'line'"
+               [data]="chartData"
+               [options]="chartData.options">
+        </canvas> -->
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <span class="legend-dot sold"></span>
+          <span>Sold: 540 Delivered</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot rent"></span>
+          <span>Rent: 140 Delivered</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>

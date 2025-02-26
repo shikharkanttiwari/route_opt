@@ -1,0 +1,262 @@
+.dashboard-container {
+    padding: 20px;
+    
+    @media (max-width: 599px) {
+      padding: 12px;
+    }
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    
+    h1 {
+      margin: 0;
+    }
+  }
+  
+  /* Stats Cards Styles */
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+    
+    @media (max-width: 1279px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 599px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .stat-card {
+    height: 100%;
+  }
+  
+  .stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .stat-title {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .info-icon {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  .stat-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-count {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+  }
+  
+  .trend-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    
+    &.up {
+      color: #4CAF50;
+    }
+    
+    &.down {
+      color: #F44336;
+    }
+    
+    mat-icon {
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
+      min-height: 18px;
+      min-width: 18px;
+      margin-right: 4px;
+    }
+  }
+  
+  /* Charts Section */
+  .charts-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 16px;
+    margin-bottom: 24px;
+    
+    @media (max-width: 959px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .chart-card {
+    height: 100%;
+    
+    mat-card-header {
+      display: flex;
+      align-items: center;
+    }
+    
+    mat-form-field {
+      width: 120px;
+      margin-top: -16px;
+      
+      ::ng-deep .mat-form-field-wrapper {
+        margin-bottom: -1.25em;
+      }
+    }
+  }
+  
+  .chart-container {
+    height: 300px;
+    position: relative;
+  }
+  
+  .chart-legend {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+  }
+  
+  .legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .legend-dot.sold {
+    background-color: #FF5722;
+  }
+  
+  .legend-dot.rent {
+    background-color: #4CAF50;
+  }
+  
+  /* Customer chart */
+  .customer-chart-container {
+    position: relative;
+    height: 200px;
+    margin: 20px 0;
+  }
+  
+  .donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .donut-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .donut-label {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .donut-value {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .customer-legend {
+    margin: 24px 0 8px;
+  }
+  
+  .customer-type {
+    margin-bottom: 16px;
+  }
+  
+  .customer-type-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  
+  .customer-name {
+    font-size: 14px;
+  }
+  
+  .customer-percent {
+    font-weight: 500;
+  }
+  
+  /* Bottom row */
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 16px;
+    
+    @media (max-width: 959px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Sales funnel */
+  .sales-funnel-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    
+    @media (max-width: 599px) {
+      flex-direction: column;
+    }
+  }
+  
+  .funnel-stage {
+    text-align: center;
+    
+    @media (max-width: 599px) {
+      margin-bottom: 16px;
+    }
+  }
+  
+  .stage-title {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+  }
+  
+  .stage-count {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Messenger */
+  .messenger-card {
+    mat-list {
+      padding-top: 0;
+    }
+    
+    mat-list-item {
+      height: auto !important;
+      padding: 8px 0;
+    }
+  }

@@ -1,0 +1,21 @@
+mat-nav-list {
+    padding-top: 0;
+  }
+  
+  a.mat-list-item {
+    padding: 5px 0;
+    height: 48px;
+    
+    .mat-icon {
+      margin-right: 16px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  
+  a.active-menu-item {
+    background-color: rgba(63, 81, 181, 0.1);
+    
+    .mat-icon, span {
+      color: #3f51b5;
+    }
+  }

@@ -1,0 +1,12 @@
+.messenger-card {
+    height: 100%;
+    
+    mat-list {
+      padding-top: 0;
+    }
+    
+    mat-list-item {
+      height: auto !important;
+      padding: 8px 0;
+    }
+  }

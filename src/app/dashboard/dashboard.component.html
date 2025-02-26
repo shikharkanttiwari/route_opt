@@ -1,0 +1,127 @@
+
+<div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1 class="mat-h1">Dashboard</h1>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary">
+        <mat-icon>add</mat-icon>
+        Add Order
+      </button>
+    </div>
+    
+    <!-- Stats Cards -->
+    <div class="stats-container">
+      <div class="stat-card-wrapper" *ngFor="let stat of orderStats">
+        <mat-card class="stat-card">
+          <mat-card-content>
+            <div class="stat-header">
+              <span class="stat-title">{{stat.title}}</span>
+              <mat-icon class="info-icon" matTooltip="More information">info_outline</mat-icon>
+            </div>
+            
+            <div class="stat-content">
+              <h2 class="stat-count">{{stat.count}}</h2>
+              <div class="trend-indicator">
+                <mat-icon *ngIf="stat.trend === 'up'">trending_up</mat-icon>
+                <mat-icon *ngIf="stat.trend === 'down'">trending_down</mat-icon>
+                <span>{{stat.change}}</span>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    
+    <!-- Charts Section -->
+    <div class="charts-container">
+      <!-- Delivered Orders Chart -->
+      <mat-card class="chart-card delivered-orders-card">
+        <mat-card-header>
+          <mat-card-title>Delivered orders</mat-card-title>
+          <div class="spacer"></div>
+          <mat-form-field appearance="outline">
+            <mat-select [(value)]="selectedYear">
+              <mat-option value="2022">2022</mat-option>
+              <mat-option value="2021">2021</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-dot sold"></span>
+              <span>Sold: 540 Delivered</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot rent"></span>
+              <span>Rent: 140 Delivered</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      
+      <!-- Customer Chart -->
+      <mat-card class="chart-card customer-card">
+        <mat-card-header>
+          <div>
+            <mat-card-title>Customer</mat-card-title>
+            <mat-card-subtitle>Information about your customer</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          
+          
+          <div class="customer-legend">
+            <div class="customer-type" *ngFor="let customer of customerData">
+              <div class="customer-type-header">
+                <div class="customer-name">{{customer.type}}</div>
+                <div class="customer-percent">{{customer.percentage}}%</div>
+              </div>
+              <mat-progress-bar mode="determinate" [value]="customer.percentage" [color]="customer.color === '#4CAF50' ? 'primary' : (customer.color === '#2196F3' ? 'accent' : 'warn')"></mat-progress-bar>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    
+    <!-- Bottom Row -->
+    <div class="bottom-row">
+      <!-- Sales Funnel -->
+      <mat-card class="funnel-card">
+        <mat-card-header>
+          <div>
+            <mat-card-title>Sales Funnel</mat-card-title>
+            <mat-card-subtitle>Unique users making requests</mat-card-subtitle>
+          </div>
+          <div class="spacer"></div>
+          <button mat-icon-button>
+            <mat-icon>more_horiz</mat-icon>
+          </button>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="sales-funnel-container">
+            <div class="funnel-stage" *ngFor="let stage of salesFunnel">
+              <div class="stage-title">{{stage.title}}</div>
+              <div class="stage-count">{{stage.count}}</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      
+      <!-- Messenger -->
+      <mat-card class="messenger-card">
+        <mat-card-header>
+          <mat-card-title>Messenger</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let message of messages">
+              <img matListAvatar [src]="message.avatar" [alt]="message.name">
+              <div matLine>{{message.name}}</div>
+              <div matLine>{{message.message}}</div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

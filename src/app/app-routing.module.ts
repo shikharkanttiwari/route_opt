@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PlannerComponent } from './planner/planner.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '/planner', component: PlannerComponent }, // Route for PlannerComponent
-  { path: '', redirectTo: '/planner', pathMatch: 'full' }, // Default route
-  { path: '**', redirectTo: '/planner' } // Catch-all wildcard route
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent }, // Default route
+  { path: '**', redirectTo: '/dashboard' } // Catch-all wildcard route
 ];
 
 @NgModule({

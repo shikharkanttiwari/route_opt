@@ -1,0 +1,36 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .funnel-card {
+    height: 100%;
+  }
+  
+  .sales-funnel-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    
+    @media (max-width: 599px) {
+      flex-direction: column;
+    }
+  }
+  
+  .funnel-stage {
+    text-align: center;
+    
+    @media (max-width: 599px) {
+      margin-bottom: 16px;
+    }
+  }
+  
+  .stage-title {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+  }
+  
+  .stage-count {
+    font-size: 18px;
+    font-weight: 500;
+  }

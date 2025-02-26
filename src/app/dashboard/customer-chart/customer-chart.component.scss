@@ -1,0 +1,54 @@
+.customer-card {
+    height: 100%;
+  }
+  
+  .customer-chart-container {
+    position: relative;
+    height: 200px;
+    margin: 20px 0;
+  }
+  
+  .donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .donut-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .donut-label {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .donut-value {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .customer-legend {
+    margin: 24px 0 8px;
+  }
+  
+  .customer-type {
+    margin-bottom: 16px;
+  }
+  
+  .customer-type-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  
+  .customer-name {
+    font-size: 14px;
+  }
+  
+  .customer-percent {
+    font-weight: 500;
+  }

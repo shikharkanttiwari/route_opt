@@ -1,0 +1,15 @@
+
+<mat-card class="messenger-card">
+    <mat-card-header>
+      <mat-card-title>Messenger</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+          <img matListAvatar [src]="message.avatar" [alt]="message.name">
+          <div matLine>{{message.name}}</div>
+          <div matLine>{{message.message}}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
