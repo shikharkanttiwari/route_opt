@@ -1,0 +1,90 @@
+
+.map-container {
+    width: 100%;
+    height: 600px; /* or whatever height you prefer */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  /* Add these styles to your component's CSS file */
+.map-fullscreen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .map-fullscreen {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Optional: If you want to keep your header or title visible */
+  .map-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  /* Add these styles to your component's CSS */
+:host {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  google-map {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* For the title */
+  .map-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Add to your global styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* If your map is in a specific route, make sure that component has no padding/margin */
+  app-root {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  /* Override the existing map-container class */
+  ::ng-deep .map-container {
+    height: 100vh !important;
+    width: 100vw !important;
+    position: absolute !important;
+    overflow: hidden !important;
+  }
