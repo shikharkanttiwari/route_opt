@@ -93,7 +93,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "https://maps.googleapis.com/maps/api/js?key=AIzaSyDdFVzDbj97kwGfXimf8rq9H9Uw-qCcuqs",
+            ]
           }
         }
       }
